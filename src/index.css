@@ -94,7 +94,9 @@ header h1 {
   align-items: center;
   gap: 2rem;
   background-color: var(--primary);
+  border: 1px solid transparent;
   padding: 2rem;
+  transition: border 0.3s ease-in;
 }
 
 .search-form button {
