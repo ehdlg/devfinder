@@ -14,7 +14,7 @@ function UserInfo({ user }: { user: string }) {
     }
   }, [error, loading]);
 
-  if (userInfo == null) return;
+  if (userInfo == null) return <section className='user-info user-info__not-loaded'></section>;
   return (
     <section className={`user-info ${loading ? 'user-info__not-loaded' : 'user-info__loaded'}`}>
       <div className='user-info__avatar'>
@@ -52,7 +52,6 @@ function UserInfo({ user }: { user: string }) {
 
         <div className='user-info__data--last-row'>
           {Object.keys(USER_FOOTER_INFO).map((key) => {
-            // Use type assertion to inform TypeScript that 'key' is a valid property of 'userInfo'
             const isAvailable =
               null !== userInfo[key as keyof IUserInfo] &&
               userInfo[key as keyof IUserInfo].toString().length > 0;
