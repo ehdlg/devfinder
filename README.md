@@ -4,6 +4,8 @@
 
 GitHub User Search App is a web application developed as part of the challenge presented on Frontend Mentor. The goal of the application is to enable users to search for GitHub users and view their profiles. It utilizes the GitHub API to fetch user information and is built using React and TypeScript.
 
+[Click here](https://devfinder-beta.vercel.app/) for the live preview.
+
 ## Features
 
 - **User Search**: Users can search for GitHub users by entering their usernames.
