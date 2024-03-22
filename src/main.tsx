@@ -5,7 +5,7 @@ import './index.css';
 import { ThemeProvider } from './context/ThemeProvider.tsx';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <ThemeProvider>
-    <Toaster richColors position='top-right' />
+    <Toaster richColors position='top-right' closeButton />
     <App />
   </ThemeProvider>
 );
