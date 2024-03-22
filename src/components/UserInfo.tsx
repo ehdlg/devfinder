@@ -59,10 +59,12 @@ function UserInfo({ user }: { user: string }) {
             const IconComponent = USER_FOOTER_INFO[key as keyof typeof USER_FOOTER_INFO];
 
             return (
-              <span className={`${isAvailable ? '' : 'not-available'}`}>
+              <div className={`${isAvailable ? '' : 'not-available'}`}>
                 <IconComponent />
-                {isAvailable ? (userInfo[key as keyof IUserInfo] as string) : NOT_AVAILABLE}
-              </span>
+                <span>
+                  {isAvailable ? (userInfo[key as keyof IUserInfo] as string) : NOT_AVAILABLE}
+                </span>
+              </div>
             );
           })}
         </div>
